@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Code : MonoBehaviour
 {
+    public GameObject Light
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,16 @@ public class Code : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+
+            if (targetObject)
+            {
+                selectedObject = targetObject.transform.gameObject;
+            }
+        }
     }
 }

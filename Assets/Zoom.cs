@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Light : MonoBehaviour
+public class Zoom : MonoBehaviour
 {
-    public GameObject light;
-    public GameObject camera;
-
-    // Light that the player has to follow
+    public GameObject ;
+    // Start is called before the first frame update
     void Start()
     {
         
